@@ -1,0 +1,65 @@
+body {
+    background-image: url(fern-wallpaper.jpg);
+}
+.passport-image {
+    float:none;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.center {
+ text-align: center
+}
+
+ul{
+    border-left: 2px solid #73AD21;
+    background: #2C7873;
+    text-align: center;
+}
+
+ul li {
+    color: #021C1E;
+    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+}
+
+ol{
+    border-left: 2px solid #73AD21;
+    background: #2C7873;
+    text-align: center;
+}
+
+ol li {
+    color: #021C1E;
+    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: aliceblue;    
+}
+
+h1 {
+	font-size: 2.5em;
+	font-weight: 700;
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+	margin-bottom: -6px;
+    text-align: center;
+    color: aliceblue;
+}
+
+h2 {
+    color: aliceblue;
+	font-size: 2em;
+	margin-left: 2px;
+	font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+	color: aliceblue;
+    font-family: 'Rokkitt', Helvetica, Arial, sans-serif;
+    text-align: center;
+}
