@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Melnyk Andrii CV</title>
+
+<meta name="description" content="Andrii Melnyk CV for web-programming lab 1"/>
+<meta charset="UTF-8"> 
+<link type="text/css" rel="stylesheet" href="style.css">
+<script>
+function validateInput(){
+  var name = document.getElementById('name').value;
+  var nameRGEX = /^[a-zA-Zа-яА-ЯіІєЄїЇ ]{1,}$/;
+  var nameResult = nameRGEX.test(name);
+  if(nameResult == false)
+  {
+    alert('Будь ласка, введіть коректне ім`я');
+    return false;
+  }
+  var phoneNumber = document.getElementById('phone').value;
+  var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+  var phoneResult = phoneRGEX.test(phoneNumber);
+  if(phoneResult == false)
+  {
+    alert('Будь ласка, введіть коректний номер телефону');
+    return false;
+  }
+  var email = document.getElementById('email').value;
+  var emailRGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var emailResult = emailRGEX.test(email);
+  if(emailResult == false)
+  {
+    alert('Будь ласка, введіть коректний емейл');
+    return false;
+  }
+  return true;
+}
+
+function messageLength(){
+    var length = document.getElementById('message').value.length;
+    document.getElementById('messageLabel').innerHTML = "Message (length = " + length + " ): ";
+}
+</script>
+</head>
+<body>
+        <div class="center">
+
+        <div>
+			<img class="passport-image" src="CV%20photo.jpg" alt="Photo" height="700" width="600" />		
+
+			<h1>Melnyk Andrii's curriculum vitae</h1>
+			<h2>Web develober</h2>
+		</div>
+            <ul>
+				<li>email: andriimelnykv@gmail.com</li>
+				<li>web-site: <a href="http://www.google.com">www.andriimelnykv.com</a></li>
+				<li>mobile: 068-016-47-09</li>
+			</ul>
+		
+				<h1>Personal Profile</h1>
+				
+				<p>Date of birth: 6 of September 1999. After school, decided to learn programming as a discipline with an endless potential.</p>
+				<h1>Work Experience</h1>
+			
+					<h2>Web developer in KHNU</h2>
+					<p>December 2019 - Present</p>
+					<p>After google peak was taken, I decided to make some contribution to my Univercity.</p>
+				
+					<h2>Web developer in google</h2>
+					<p>December 2018 - December 2019</p>
+					<p>My first company. After one week training, I decided that there should be some real development experience. Some little company, named Google agreed 
+					to train me. It was realy hard work, but it gave me priceless experience.
+					</p>
+				
+				<h1>Key Skills</h1>
+			
+				<ol>
+					<li>HTML development</li>
+					<li>CSS development</li>
+				</ol>
+				<h1>Education</h1>
+			
+					<h2>Khmelnytsky National Univercity</h2>
+					<p>Software engineer</p>
+					<p>Higher Education</p>
+					<h2>School</h2>
+					<p>Khmelnitsky Collegium #16</p>
+					<p>secondary education</p>
+       
+  <form onsubmit="return validateInput()">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="fname" value=""><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" value=""><br>
+  <label for="name">Phone:</label><br>
+  <input type="tel" id="phone" name="phone" value=""><br>
+  <label id="messageLabel" for="message">Message:</label><br>
+  <input onchange="messageLength()" type="text" id="message" name="message" value=""><br>
+  <input type="submit" value="Send message">
+  </form>
+        </div>
+
+</body>
+</html>
